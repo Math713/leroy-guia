@@ -1,0 +1,33 @@
+
+:root {
+    --color-primary: #087C45;
+    --color-primary-dark: #075C36;
+    --color-primary-light: #EAF5EE;
+
+    --color-background: #F5F6F5;
+    --color-surface: #FFFFFF;
+
+    --color-text: #202820;
+    --color-text-muted: #68736B;
+
+    --border-radius: 12px;
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
