@@ -17,6 +17,7 @@ CATALOG_BY_ID = {product["id"]: product for product in CATALOG}
 
 MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:5173")
 
 catalog_for_ai = [
     {"id": p["id"], "name": p["name"], "category": p["category"], "price": p["price"], "description": p["description"]}
@@ -64,7 +65,7 @@ app = FastAPI(title="Leroy Guia API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["http://localhost:5173", FRONTEND_URL],
     allow_methods=["*"],
     allow_headers=["*"],
 )
