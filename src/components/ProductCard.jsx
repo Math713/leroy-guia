@@ -24,6 +24,12 @@ function ProductCard({ product }) {
                     <span>{product.brand}</span>
                     <span>⭐ {product.rating}</span>
                 </div>
+
+                {product.aisle && (
+                    <div className="badge bg-success-subtle text-success text-wrap text-start mt-2">
+                        📍 {product.aisle}
+                    </div>
+                )}
             </div>
         </div>
     );
