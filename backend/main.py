@@ -70,6 +70,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def root():
+    return {"name": "Leroy Guia API", "status": "ok"}
 
 @app.get("/health")
 def health():
